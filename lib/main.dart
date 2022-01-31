@@ -54,7 +54,6 @@ class MyHomePage extends StatelessWidget {
                 child: Row(
                   children: <Widget>[
                     Container(
-                      width: 80,
                       margin: EdgeInsets.symmetric(
                         vertical: 10,
                         horizontal: 15,
@@ -72,14 +71,22 @@ class MyHomePage extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                             fontSize: 16,
                             color: Colors.purple),
-                        textAlign: TextAlign.center,
                       ),
                     ),
                     Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Text(tx.title),
+                        Text(
+                          tx.title,
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            letterSpacing: -0.5,
+                          ),
+                        ),
                         Text(
                           tx.date.toString(),
+                          style: TextStyle(color: Colors.grey[500]),
                         ),
                       ],
                     )
